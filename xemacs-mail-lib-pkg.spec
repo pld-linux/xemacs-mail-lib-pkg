@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Fundamental lisp files for providing email support.
 
-%description -l pl 
+%description -l pl
 Podstawowe pliki makr ze wsparciem do obs³ugi poczty.
 
 %prep
@@ -30,13 +30,13 @@ install -d $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 
 cp -a * $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 
-gzip -9nf lisp/mail-lib/ChangeLog 
+gzip -9nf lisp/mail-lib/ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc lisp/mail-lib/ChangeLog.gz 
+%doc lisp/mail-lib/ChangeLog.gz
 %dir %{_datadir}/xemacs-packages/lisp/*
 %{_datadir}/xemacs-packages/lisp/*/*.elc
