@@ -2,7 +2,7 @@ Summary:	Fundamental lisp files for providing email support
 Summary(pl):	Fundamental lisp files for providing email support
 Name:		xemacs-mail-lib-pkg
 %define 	srcname	mail-lib
-Version:	1.28
+Version:	1.33
 Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
