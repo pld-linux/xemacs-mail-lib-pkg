@@ -9,7 +9,7 @@ Summary(pl):	Fundamental lisp files for providing email support.
 
 Name:    	xemacs-mail-lib-pkg
 %define 	srcname	mail-lib
-Version: 	1.24
+Version: 	1.28
 Release:	1
 
 ### Preamble
@@ -22,6 +22,7 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 BuildArch:	noarch
 Conflicts:	xemacs-sumo
 Requires: 	xemacs
+Requires: 	xemacs-eterm-pkg
 Requires: 	xemacs-base-pkg
 ### EndPreamble
 
@@ -29,24 +30,6 @@ Requires: 	xemacs-base-pkg
 
 
 %description -l pl 
-
-
-%package el
-Summary: 	Fundamental lisp files for providing email support. This package contains .el files
-Summary(pl):	Fundamental lisp files for providing email support. Pliki ¿ród³owe .el
-
-### ElPreamble
-Group:    	Applications/Editors/Emacs
-Group(pl):	Aplikacje/Edytory/Emacs
-Requires: 	%{name} = %{version}
-### EndElPreamble
-
-
-%description el
-.el source files -- not necessary to run XEmacs
-
-%description el -l pl
-Pliki ¼ród³owe procedur w eLispie do XEmacsa.
 
 
 ### Main
@@ -57,6 +40,7 @@ Pliki ¼ród³owe procedur w eLispie do XEmacsa.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 cp -a * $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
+gzip -9nf lisp/mail-lib/ChangeLog 
 
 %clean
 rm -fr $RPM_BUILD_ROOT
@@ -67,5 +51,8 @@ rm -fr $RPM_BUILD_ROOT
 
 ### Files
 %files
-%{_datadir}/xemacs-packages/lisp/*
+%defattr(644,root,root,755)
+%dir %{_datadir}/xemacs-packages/lisp/*
+%{_datadir}/xemacs-packages/lisp/*/*.elc
+%doc lisp/mail-lib/ChangeLog.gz 
 ### EndFiles
