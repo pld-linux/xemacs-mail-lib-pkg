@@ -1,11 +1,12 @@
-Summary:	Fundamental lisp files for providing email support
-Summary(pl):	Fundamental lisp files for providing email support
+Summary:	Base lisp files for providing email support
+Summary(pl):	Podstawowe pliki makr ze wsparciem do obs³ugi poczty
 Name:		xemacs-mail-lib-pkg
 %define 	srcname	mail-lib
 Version:	1.33
 Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
+Group(de):	Applikationen/Editors/Emacs
 Group(pl):	Aplikacje/Edytory/Emacs
 Source0:	ftp://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
 URL:		http://www.xemacs.org/
@@ -17,8 +18,10 @@ Requires:	xemacs-base-pkg
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Fundamental lisp files for providing email support.
 
 %description -l pl 
+Podstawowe pliki makr ze wsparciem do obs³ugi poczty.
 
 %prep
 %setup -q -c
@@ -32,7 +35,7 @@ cp -a * $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 gzip -9nf lisp/mail-lib/ChangeLog 
 
 %clean
-rm -fr $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
