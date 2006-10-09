@@ -2,12 +2,12 @@ Summary:	Base lisp files for providing email support
 Summary(pl):	Podstawowe pliki makr ze wsparciem do obs³ugi poczty
 Name:		xemacs-mail-lib-pkg
 %define 	srcname	mail-lib
-Version:	1.63
+Version:	1.76
 Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
 Source0:	ftp://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
-# Source0-md5:	99b3f341e8c29ad2dc3fec5196e32549
+# Source0-md5:	7612a685afafb0bdf2c4fe416bbcdae1
 URL:		http://www.xemacs.org/
 BuildArch:	noarch
 Conflicts:	xemacs-sumo
