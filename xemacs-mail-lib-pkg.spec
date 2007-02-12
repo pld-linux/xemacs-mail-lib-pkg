@@ -1,5 +1,5 @@
 Summary:	Base lisp files for providing email support
-Summary(pl):	Podstawowe pliki makr ze wsparciem do obs≥ugi poczty
+Summary(pl.UTF-8):   Podstawowe pliki makr ze wsparciem do obs≈Çugi poczty
 Name:		xemacs-mail-lib-pkg
 %define 	srcname	mail-lib
 Version:	1.76
@@ -19,8 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Fundamental lisp files for providing email support.
 
-%description -l pl
-Podstawowe pliki makr ze wsparciem do obs≥ugi poczty.
+%description -l pl.UTF-8
+Podstawowe pliki makr ze wsparciem do obs≈Çugi poczty.
 
 %prep
 %setup -q -c
